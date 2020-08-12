@@ -5,16 +5,18 @@ import Foundation
 
   main.swift
 
-// Write a program that given a number , returns a list multiplication table to that number.
+/* Write a program that given a number , returns a list multiplication table to that number.
 
+
+ Test Case:
  5
- 1 x 1 = 1x
+ 1 x 1 = 1
  2 x 2 = 4
  3 x 3 = 9
  4 x 4 = 16
  5 x 5 = 25
 
-
+*/
 
 var tablesSize = Int(readLine(strippingNewline: true)!)
 
