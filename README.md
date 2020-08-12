@@ -11,11 +11,9 @@ Next:
 
 `Run file`
 
-Unfortunately,  you will have to
+> Unfortunately,  you *will* have to remove comments
 
-`Remove Comments` 
-
-After  this,
+But after  this,
 
 **You're good to go!**
 
