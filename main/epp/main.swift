@@ -1,22 +1,20 @@
 
-
 import Foundation
 
-// Random Programming problems I came up with myself (besides fizzbuzz). They're  all probably  Leetcode Very Easy besides the last one.
+ //Random Programming problems I came up with myself (besides fizzbuzz). They're  all probably  Leetcode Very Easy besides the last one.
 
- /* main.swift
+  main.swift
 
 // Write a program that given a number , returns a list multiplication table to that number.
 
-/*
  5
- 1 x 1 = 1
+ 1 x 1 = 1x
  2 x 2 = 4
  3 x 3 = 9
  4 x 4 = 16
  5 x 5 = 25
 
-*/
+
 
 var tablesSize = Int(readLine(strippingNewline: true)!)
 
@@ -57,15 +55,13 @@ func reverseString(stringToReverse:String)  -> String   {
 _ = reverseString(stringToReverse: "Racecar")
  
  
- //ouput: "olleH"
+ //ouput: "racecaR"
 
 
 
  Write the game of hangman.
  
  Level: Easy
- */
-/*
 
 var numTries = 5
 print("Enter a word to try and guess")
@@ -127,21 +123,21 @@ func fizzBuzz() {
 
 
 fizzBuzz()
- */
+ 
 
 
-/* HackerEarth's first problem.
+ // HackerEarth's first problem.
 
 let num = Int(readLine(strippingNewline: true)!)
 let str = readLine()
 let newN = num! * 2
 print("\(newN)" + "\n\(str!)")
  
- */
+ 
 
-/* Traverse an array, arr of random numbers, and count each occurance of said number */
+// Traverse an array, arr of random numbers, and count each occurance of said number */
 
-/*
+
 func travserseArray(value:Int,i:Int,range:Int){
     var counter = 0
     var arr = [Int]()
@@ -180,4 +176,4 @@ func travserseArray(value:Int,i:Int,range:Int){
 }
 
 travserseArray(value: 3,i:3,range:10)
-*/
+
