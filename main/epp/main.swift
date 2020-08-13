@@ -61,9 +61,9 @@ _ = reverseString(stringToReverse: "Racecar")
 
 
 
- Write the game of hangman.
+ // Write the game of hangman.
  
- Level: Easy
+ // Level: Easy
 
 var numTries = 5
 print("Enter a word to try and guess")
@@ -137,7 +137,7 @@ print("\(newN)" + "\n\(str!)")
  
  
 
-// Traverse an array, arr of random numbers, and count each occurance of said number */
+// Traverse an array of i size, with an array of random numbers, and count each occurance of N number. */
 
 
 func travserseArray(value:Int,i:Int,range:Int){
