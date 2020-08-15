@@ -236,7 +236,7 @@ O(n) time complexity
 */
 
 /*
- You are given a string  S , which comprises English alphabets, determine the count of all the vowels in  S . Vowels are  [ a , e , i , o , u ] . Print the count of all the vowels that are available in the string  S .
+ You are given a string  word , which comprises English alphabets, determine the count of all the vowels in  word . Vowels are  [ a , e , i , o , u ] . Print the count of all the vowels that are available in the string  word .
  */
 
 var a = "a"
