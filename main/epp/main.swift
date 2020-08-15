@@ -179,3 +179,47 @@ func travserseArray(value:Int,i:Int,range:Int){
 
 travserseArray(value: 3,i:3,range:10)
 
+/*
+ You are given a string  S , which comprises English alphabets, determine the count of all the vowels in  S . Vowels are  [ a , e , i , o , u ] . Print the count of all the vowels that are available in the string  S .
+ */
+
+var a = "a"
+var e = "e"
+var i = "i"
+var o = "o"
+var u = "u"
+
+
+func findVowels(word:String){
+    
+   var  arr = [String]()
+    arr.append(word)
+    
+    var count: Int = 0
+    
+    for word in arr {
+        for char in word {
+            switch char {
+                case "a":
+                    count = count + 1
+                case "e":
+                    count = count + 1
+                case "i":
+                    count = count + 1
+                case "o":
+                    count = count + 1
+                case "u":
+                    count = count + 1
+                default:
+                    break
+            }
+        }
+    }
+    print("There are " +  "\(count) " + "vowels")
+}
+findVowels(word: "yvl")
+
+// Output : There are 0 vowels 
+
+
+
