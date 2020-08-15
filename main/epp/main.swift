@@ -217,9 +217,6 @@ func findVowels(word:String){
     }
     print("There are " +  "\(count) " + "vowels")
 }
-findVowels(word: "yvl")
+findVowels(word: "Hello! My name is Thomas.")
 
-// Output : There are 0 vowels 
-
-
-
+// Output : There are 7 vowels
