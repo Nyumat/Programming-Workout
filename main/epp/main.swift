@@ -277,3 +277,67 @@ findVowels(word: "Hello! My name is Thomas.")
 
 // Input: "Hello! My name is Thomas."
 // Output : There are 7 vowels
+
+*/
+
+// Given an unsorted array of characters, arr, find the reoccuring character.
+
+/*
+Input - ["a","s","r","e","d","g","s"]
+ 
+ Output - ["s"]
+ 
+ */
+
+
+
+func findReOccuringChars(charsToAd:Int) {
+    
+    var empty_arr = [String]()
+    var evaluator_arr = [String]()
+    var char_appreance = 0
+    var appeared = [String]()
+    
+    
+    for _ in 0..<charsToAd {
+        let charsToAdd = readLine()!
+        empty_arr.append(charsToAdd)
+        evaluator_arr.append(charsToAdd)
+            
+        }
+
+    
+    
+    for char in empty_arr {
+        for i in (0..<evaluator_arr.count).reversed() {
+            if char == evaluator_arr[i]{
+                char_appreance = char_appreance + 1
+                appeared.append(char)
+                }
+        
+        }
+        
+    }
+
+    for letter in evaluator_arr {
+        for v in empty_arr{
+            if letter == empty_arr[letter]  {
+                print("Repeating char is " + "\(appeared[0])")
+                }
+        }
+}
+    if char_appreance == 0 {
+        print("There are no repeating characters in this array")
+    }
+    
+    }
+
+    
+
+
+    
+    
+print("--> Add Characters to evaluate")
+findReOccuringChars(charsToAd: 5)
+
+
