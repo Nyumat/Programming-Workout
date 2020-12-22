@@ -179,9 +179,6 @@ def numIslands(self, grid: List[List[str]]) -> int:
             surroundCheck(grid,i,j)
             numIsland+=1
     return numIsland
-
-# Reccursive solution coming soon!
-
 def invertBinaryTree(tree):
     """
     We're going to be representing a tree 
