@@ -155,33 +155,30 @@ def findForocoNum(numsEval):
             breakpoint
     return forco
 
-
 "This is the counting islands problem from leetcode"
-def dfs(matrix):
-    # Initialize a pointer that we can point our program to.
-    beginning = None
-    isIsland = None
-    while beginning < matrix:
-        beginning = matrix
-        for i in matrix:
-            for j in matrix[i]:
-                dfs(matrix[i][j])
+def numIslands(self, grid: List[List[str]]) -> int:
+    def surroundCheck(binaryMatrix,i,j):
+    lr = len(binaryMatrix)-1 #rows
+    lc = len(binaryMatrix[0])-1
 
-        if matrix[i][j] == "0":
-            isIsland = False
-            return 0
-        else:
-            isIsland = True
-            dfs(matrix[j+1][i+1])
-        
-        dfs(matrix[i])
-        dfs(matrix[j])
-        dfs(matrix[i][j])
-        dfs(matrix[i+j])
-
-        break
-
-    return isIsland
+    if binaryMatrix[i][j]=="0":
+        return
+    binaryMatrix[i][j]="0" 
+    if (i+1) <= lr:
+         surroundCheck(binaryMatrix,i+1,j)
+    if (j+1) <= lc:
+        surroundCheck(binaryMatrix,i,j+1)
+    if (i-1) >= 0:
+        surroundCheck(binaryMatrix,i-1,j) 
+    if (j-1) >= 0:
+        surroundCheck(binaryMatrix,i,j-1)  
+    numIsland=0
+    for i in range(len(grid)):
+       for j in  range(len(grid[0])):
+          if grid[i][j]=="1":
+            surroundCheck(grid,i,j)
+            numIsland+=1
+    return numIsland
 
 # Reccursive solution coming soon!
 
