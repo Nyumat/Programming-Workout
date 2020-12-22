@@ -1,20 +1,24 @@
-# Easy-Programming-Problems
-Basic programming problems that can be solved without extensive knowledge of Data Structures &amp;  Algorithms. 
+<h1 align="center"> Programming Workout</h1>
 
-**To run this you will need Xcode IDE or an equivalent Swift Compiler.**
+<p align="center">
+  <br>This repository consist of common programming questions currently in swift & python.</br>
+  <br>I use the term "workout" because it's always good to strengthen those Data Structure and Algorithm chops.</br>
 
-First  obtain the executable  file:
+</p>
 
-`Download main.xcodeproj`
+<h1 align="center">For those interested in interview preparation...</h1>
 
-Next:
+<p align="center">
+  <br>I do mock interviews!</br>
+  <br>A friend group of mine in university conduct mock interviews with each other as a way to 
+simulate a real interviewing environment.</br>
 
-`Run file`
+<p align="center">
+  <br>If you'd like to partake, all you have to do is send an email to <a href="nyumat18@gmail.com">me</a> containing:</br
 
-> Unfortunately,  you *will* have to remove comments
-
-But after  this,
-
-**You're good to go!**
-
-**(Created 100% with Swift)**
+  <br>Your Name</br>
+  <br>Availability</br>
+  <br>Language of Choice</br>
+  <br>These details will be used to match you with either I, or one of my friends.</br>
+ 
+</p>
