@@ -179,6 +179,7 @@ def numIslands(self, grid: List[List[str]]) -> int:
             surroundCheck(grid,i,j)
             numIsland+=1
     return numIsland
+    
 def invertBinaryTree(tree):
     """
     We're going to be representing a tree 
@@ -271,27 +272,7 @@ def sohw(digits):
 
 digits = [4,9,9,9]
 print(sohw(digits))
-
-
-def isPalindrome(s):
-
-    begin = 0
-    end = len(s) - 1
-
-    while end > begin:
-        if s[begin] == s[end]:
-            begin+=1
-            end-=1
-            continue
-        else:
-            return False
-
-    if begin >= end:
-        return True
-   
-s = "hoh"
-print(isPalindrome(s))
-
+# Output = [5,0,0,0]
 
 def makeGrid(cols,rows):
     board = []
