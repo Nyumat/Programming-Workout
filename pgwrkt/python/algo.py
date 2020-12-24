@@ -1,4 +1,4 @@
-
+"""
 # Given a string, str, 
 # Find the first reccuring character.
 # Using Set
@@ -179,7 +179,6 @@ def numIslands(self, grid: List[List[str]]) -> int:
             surroundCheck(grid,i,j)
             numIsland+=1
     return numIsland
-    
 def invertBinaryTree(tree):
     """
     We're going to be representing a tree 
@@ -206,7 +205,7 @@ def findNextNum(nums):
         Now, with this array containing n numbers, return the next 
         num of the smallest digit.
         """
-        
+"""     
 import random
 # Given an array, nums containing numbers 1...100
 # Find the number of missing integers.
@@ -291,4 +290,17 @@ board_obj = makeGrid(10,10)
 
 printt(board_obj)
 
+"""
+def findNthOccuring(string,target,char):
+    occur = 0
 
+    for i in range(len(string)):
+        if string[i] == char:
+            occur += 1
+        if occur == target:
+            return i
+    return -1
+
+print(findNthOccuring([1,2,1,1,3,1,2,1],5,1))
+
+# Output: 7 TC : Linear SC: O(n)
