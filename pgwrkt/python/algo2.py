@@ -1,19 +1,23 @@
 # Programming Workout
 # Originally Created 10/20/2020
-def binarySearch(arr,left,right,target):
+def binarySearch(arr,target):
+        l = 0 
+        r = len(target) - 1
         
-        arr = [1,2,3,4,5,20,50]
-        target = 2
-        
-                mid = l + (r - 1) // 2;
+        while (l < r):
+                
+                mid = l + (r - l) // 2
                 
                 if arr[mid] == target:
                         return mid
-                elif arr[mid] < x:
-                        left = mid + 1
+                else if arr[mid] < target:
+                        l = mid + 1
                 else:
                         r = mid - 1
-        return "Element not present."
+                if not mid:
+                        return "no element found"
+                        
+       return 0
 
 
 # Find the Largest elemenet in an array.
