@@ -14,7 +14,7 @@
 simulate a real interviewing environment.</br>
 
 <p align="center">
-  <br>If you'd like to partake, all you have to do is send an email to <a href="nyumat18@gmail.com">me</a> containing:</br>
+  <br>If you'd like to partake, all you have to do is send an email to <a href="nyumat18@gmail.com">me</a> containing:</br
 
   <br>Your Name</br>
   <br>Availability</br>
