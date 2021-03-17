@@ -1,334 +1,159 @@
-"""
-# Given a string, str, 
-# Find the first reccuring character.
-# Using Set
-def findReccur(reccuring):
-    seen = set()
+# New Problem Set!
+# All of these problems are indexed in line with leetcode.com 
 
-    for letter in reccuring:
-        if letter in seen:
-            reccur = letter
+#1. TwoSum
+
+# Given an array arr and a target k, find two integers [x,y] that equal k.
+
+def twoSum(arr, k):
+
+    data = {}
+
+    for i in range(len(arr)):
+        match = k - arr[i]
+        if match in data:
+            return [data[match],i]
         else:
-            seen.add(letter) 
-    return reccur
+            data[arr[i]] = i
     
-findReccur([A,B,A,B])
-# Output : A
+# Tests
 
-# Given array of random numbers with n reccuring numbers, find the most occuring character.
-def findOccurances(nums):
-    seen = set()
-    for num in nums:
-        if (num not in seen):
-            seen.add(num)
-        else:
-            return num
+twoSum = twoSum([1,2,3,3],6) # - > [2,3]
+print(twoSum)
 
-print(findOccurances([2,1,1,2,3,1]))
-# Output : 1
+# 219. Contains Duplicate II
 
-# Given a string, remove all vowels from it in place and return it.
+def containsDuplicateII(nums, k):
+    map = {}
 
-def findDeriv():
-    coefficent = input("Enter a coefficent")
-
-    power = input("Enter a power.")
-
-    variable = input("Enter A variable.")
-
-    while True:
-        derivative = power * coefficent
-        power = power - 1
-        variable = variable
-        break
-
-    return derivative,variable,power
+    for i in range(len(nums)):
+        if nums[i] in map and i - map[nums[i]] <= k:
+            return True
+        map[nums[i]] = i
+    return False
 
 
-print(findDeriv())
+containsDuplicateII = containsDuplicateII([2,7,3,2,4],3) # - > True
+print(containsDuplicateII)
 
-# Given a non-empty string of characters, chars, return
-# the first reccuring char.
-
-# Using a HashMap
-def findReccuring(chars):
-    seen = {}
-    for i in chars:
-        if chars in seen:
-            seen[chars] = i
-        else:
-            return i
-        
-print(findReccuring("CCABCABANBB"))
-
-# OUTPUT: C
-
-# Now, do the same thing but find the first
-# NON reccuring charatcer.
-
-def firstNonReccuring(chars):
-    reccur = {}
-    for i in chars:
-        if i not in reccur:
-            reccur[chars] = i
-            continue
-        else:
-            reccur[i]
-
-
-print(firstNonReccuring("ADACBADB"))
-
-# Given an array of elements and a number, remove the number from the array.
-def removeElement(nums,val):
-
-    for i in nums:
-        if nums[i] == val:
-            nums.remove(nums[i])
-        else:
-            continue
-        return nums, len(nums)
-
-    
-print(removeElement([1,2,4,3,5],4))
-
-import random
-# Random Password Generator Python Implementation
-def generatePassword(passLen):
-    returnValue = ""
-    letters_nums = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789"
-    
-    for _ in range(0,passLen):
-        character = random.choice(letters_nums)
-        returnValue += character
-    
-    return returnValue
-    
-def randomPasswordGeneration(amount):
-    for _ in range(0,amount):
-        print(generatePassword(10))
-
-randomPasswordGeneration(1000000)
- 
-def reverseLinkedList(linkedLis):
-    for i in linkedLis:
-        prev = None 
-        curr = head
-        next = curr.next
-        while True:
-            curr.next = prev
-            prev = curr
-            curr = next
-            next = curr.next
-            if curr == None:
-                head = prev
-                break
-    return prev
-
-def countingSteps(steps,n):
-    end = len(steps) - 1
-    step_count = 0
-    next_step = 0
-
-    while next_step != end:
-        step_count += 1
-        if next_step == end:
-            step_count += 1
-            break
-        else:
-            continue
-    return step_count
-    
-countingSteps([0,0,0],2)
-
-def findForocoNum(numsEval):
-    forco = 0
-    for num in numsEval:
-        num += 1
-        for digit in num:
-            if num[digit] + 2 == forco:
-                return forco
-            else:
-                continue
-        if forco > len(numsEval):
-            return "No Forco nums"
-        else:
-            breakpoint
-    return forco
-
-"This is the counting islands problem from leetcode"
-def numIslands(self, grid: List[List[str]]) -> int:
-    def surroundCheck(binaryMatrix,i,j):
-    lr = len(binaryMatrix)-1 #rows
-    lc = len(binaryMatrix[0])-1
-
-    if binaryMatrix[i][j]=="0":
-        return
-    binaryMatrix[i][j]="0" 
-    if (i+1) <= lr:
-         surroundCheck(binaryMatrix,i+1,j)
-    if (j+1) <= lc:
-        surroundCheck(binaryMatrix,i,j+1)
-    if (i-1) >= 0:
-        surroundCheck(binaryMatrix,i-1,j) 
-    if (j-1) >= 0:
-        surroundCheck(binaryMatrix,i,j-1)  
-    numIsland=0
-    for i in range(len(grid)):
-       for j in  range(len(grid[0])):
-          if grid[i][j]=="1":
-            surroundCheck(grid,i,j)
-            numIsland+=1
-    return numIsland
-"""
-def invertBinaryTree(tree):
-    """
-    We're going to be representing a tree 
-    horizontally and not vertically because 
-    unfortunately, im not skilled enough to create 
-    a tree class myself yet. lol :(    
-
-        Ex. [0,0,1,0,0]
-            [0,2,0,3,0]
-            [0,0,4,0,5]
-
-        With the 0's representing empty tree links.
-
-    *PS. While this IS more work to do as now we have
-    a matrix versus an object, it's much more fun, because now we get
-    to implement DFS, BFS, Backtracking, and Reccursion! :)
-
-    """
-    
-def findNextNum(nums):
-        """
-        Given arr nums, the next num is the current indice plus
-        the value of the current indicie.
-        Now, with this array containing n numbers, return the next 
-        num of the smallest digit.
-        """
-"""     
-import random
-# Given an array, nums containing numbers 1...100
-# Find the number of missing integers.
-
-nums = []
-for x in range(0,100):
-    nums.append(x)
-    
-
-def findMissingNums(nums):
-    missingNum = {}
-    miss_count = 0
-    for i in nums:
-        plusOne = i+1
-        if plusOne not in nums:
-            missingNum[i] = i + 1
-            continue
-        else:
-            miss_count += 1
-    print(miss_count)
-findMissingNums(nums)
-
-def plusOne(digits):
-    for x in range(len(digits)):
-        if digits[x] < 9:
-            digits[x]+=1
-        else:
-            digits[x]=0
-    print(digits)
-
-
-plusOne([1,2,3,9])
-
-def validPalindrome(s):
-    begin = 0
-    end = len(s) - 1
-   
-    while end > begin:
-        if s[begin] == s[end]:
-            begin+=1
-            end-=1
-            continue
-        else:
-            return False
-            
-    if begin >= end:
-        return True
-
-s = "tacocat"
-print(validPalindrome(s))
-#  Output: True
-
-def sohw(digits):
-    n = len(digits)-1
-    while n>=0:
-        if digits[n]<9:
-            digits[n] += 1
-            return digits
-        digits[n] = 0
-        n -= 1
-    return [1] + digits
-
-
-digits = [4,9,9,9]
-print(sohw(digits))
-# Output = [5,0,0,0]
-
-def makeGrid(cols,rows):
-    board = []
-
-    for row in range(rows):
-        board.append([])
-        for column in range(cols):
-            board[row].append('x')
-
-    return board
-def printt(board):
-    for row in board:
-        print(" ".join(row))
-       
-board_obj = makeGrid(10,10)
-
-printt(board_obj)
-
-def findNthOccuring(string,target,char):
-    occur = 0
-
-    for i in range(len(string)):
-        if string[i] == char:
-            occur += 1
-        if occur == target:
-            return i
-    return -1
-
-print(findNthOccuring([1,2,1,1,3,1,2,1],5,1))
-
-# Output: 7 TC : Linear SC: O(n)
-
-However, we should try and aim for the optimal solution,
-which is done through binary search!
-
-"""
-# Basic Binary Search 
+# Binary Search Iteratively
 
 def binarySearch(nums,target):
-    l,r = 0,len(nums) - 1
+    if not nums:
+        return []
 
-    while l <= r:
+    l = 0
+    r = len(nums) - 1
+
+    while (l < r):
         mid = l + (r - l) // 2
-        if target == nums[mid]:
+        if nums[mid] == target:
             return mid
-        elif target < nums[mid]:
-            r = mid - 1
-        else:
+        elif nums[mid] < target:
+        # [1,2,3,4,5]
             l = mid + 1
-    
-    return -1
+        else:
+            r = mid - 1
+    return mid
 
-nums = [2,4,5,6,8,9,10,11]
-target = 4
+binarySearch = binarySearch([1,2,3,4,5,6,7,8,9],2)
+print(binarySearch)
 
-index = binarySearch(nums,target)
+# Valid Integer
 
-print("Target was found at index:",index)
-# Output Tagret was found at index: 1
+def is_integer(string):
+    counter = 0
+    for i in string:
+        if i >= '0' and i <= '9':
+            counter += 1
+    if counter == len(string):
+        return True
+    return False
+
+valid_int = is_integer("99392")
+print(valid_int)
+
+# Valid Palindrome
+
+def is_palindrome(str):
+    left = 0
+    right = len(str) - 1
+
+    if str[left] == ' ':
+        left +=1
+
+    if str[right] == ' ':
+        right -= 1    
+
+    if not str:
+        return True
+
+    while (left < right):
+        if str[left] != str[right]:
+            return False
+        else:
+            left += 1
+            right -= 1
+
+    if left == right:
+        return True
+
+valid_palindrome = is_palindrome(" racecar ")
+print(valid_palindrome)
+
+# Valid Paraens
+
+def valid_para(str):
+    matches = {"[":"]",}
+    stack = []
+
+# A node contains the value, left and right pointers
+class newNode: 
+    def __init__(self,data): 
+        self.data = data 
+        self.left = self.right = None
+
+# Invert Binary Tree
+def invert(node):  
+  
+    if (node == None): 
+        return
+    else: 
+  
+        temp = node  
+          
+        # recursive calls
+        invert(node.left)  
+        invert(node.right)  
+  
+        # swap the pointers in this node
+        temp = node.left  
+        node.left = node.right  
+        node.right = temp  
+
+# print InOrder binary tree traversal.
+def print_tree(node) : 
+  
+    if (node == None):  
+        return
+          
+    print_tree(node.left)  
+    print node.data,
+    print_tree(node.right)  
+
+root = newNode(2)  
+root.left = newNode(1)  
+root.right = newNode(4)  
+root.right.left = newNode(3)  
+root.right.right = newNode(5)  
+  
+# Print inorder traversal of the input tree
+print("Inorder traversal of the constructed tree is")  
+print_tree(root)  
+      
+# Convert tree to its mirror
+invert(root)  
+  
+# Print inorder traversal of the mirror tree
+print("\nInorder traversal of the mirror treeis ")  
+print_tree(root)  
